@@ -1,11 +1,10 @@
-using ??_Án_L?p_Trình_Web_Bán_Th?c_?n_Nhanh.Models;
 using DoAnLapTrinhWebBanThucAnNhanh.Models;
 using Microsoft.EntityFrameworkCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Thêm MVC (Controllers + Views)
+// ThÃªm MVC (Controllers + Views)
 builder.Services.AddControllersWithViews();
 
 // K?t n?i Database SQL Server
@@ -14,7 +13,7 @@ builder.Services.AddDbContext<FastFoodContext>(options =>
 
 var app = builder.Build();
 
-// C?u hình pipeline x? lý request
+// C?u hÃ¬nh pipeline x? lÃ½ request
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
